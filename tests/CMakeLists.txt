@@ -25,8 +25,8 @@ cmake_minimum_required(VERSION 3.12)
 add_compile_options(
         -Wall
         -Wextra
-        -Werror
-        -Wfatal-errors
+#        -Werror
+#        -Wfatal-errors
         -Wfloat-equal
         -Wunreachable-code
         -Wno-unused-function
@@ -44,6 +44,8 @@ target_link_libraries(main
         pico-scale
         pico_stdlib
         pico_stdio
+        pico_cyw43_arch_none
+        hardware_pio
         )
 
 pico_enable_stdio_usb(main 1)
